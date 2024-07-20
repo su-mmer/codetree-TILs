@@ -4,4 +4,4 @@ n = int(input())
 if n > len(string):
     print(string[::-1])
 else:
-    print(string[:-12:-1])
+    print(string[:-n-1:-1])
