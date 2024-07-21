@@ -1,11 +1,11 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-def even_divide(myarr):
-    for i in range(len(myarr)):
-        if myarr[i] % 2 == 0:
-            myarr[i] = int(myarr[i] / 2)
-    return myarr
+def even_divide(arr):
+    for i in range(n):
+        if arr[i] % 2 == 0:
+            arr[i] //= 2
 
-for elem in even_divide(arr[:]):
+even_divide(arr)
+for elem in arr:
     print(elem, end = ' ')
