@@ -2,13 +2,10 @@ a, b = map(int, input().split())
 cnt = 0
 
 def is_3_6_9(i):
-    while True:
-        quot, remain = i // 10, i % 10
-        if remain == 3 or remain == 6 or remain == 9:
+    while i > 0:
+        if i % 10 == 3 or i % 10 == 6 or i % 10 == 9:
             return True
-        if quot < 1:
-            return False
-        i = quot
+        i = i // 10
 
 
 def is_multiple(i):
