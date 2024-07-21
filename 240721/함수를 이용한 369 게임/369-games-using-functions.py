@@ -1,0 +1,18 @@
+a, b = map(int, input().split())
+cnt = 0
+
+# def is_3_6_9(i):
+#     while True:
+
+#     return str(i)
+
+
+# def is_multiple(i):
+#     return i % 3 == 0
+
+
+# for i in range(a, b+1):
+#     if is_3_6_9(i) or is_multiple(i):
+#         cnt += 1
+
+print(9 / 10)
