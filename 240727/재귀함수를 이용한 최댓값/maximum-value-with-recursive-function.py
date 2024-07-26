@@ -2,14 +2,11 @@ n = int(input())
 arr = list(map(int, input().split()))
 i = 0
 
-def find_max(value, i):
-    if i == n:
-        return value
+def find_max(i):
+    if i == 0:
+        return arr[i]
 
-    if value < arr[i]:
-        return find_max(arr[i], i + 1)
-    else:
-        return find_max(value, i + 1)
+    return max(find_max(arr[i-1]), arr[i])
 
 
-print(find_max(0, i))
+print(find_max(arr[n - 1]))
