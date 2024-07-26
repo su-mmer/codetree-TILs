@@ -6,8 +6,7 @@ def calculate(n):
     if n == 2:
         return 2
 
-    if n % 2 == 0:
-        return n + calculate(n - 2)
+    return n + calculate(n - 2)
 
     
 print(calculate(n))
