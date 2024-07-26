@@ -8,8 +8,6 @@ def calculate(n):
 
     if n % 2 == 0:
         return n + calculate(n - 2)
-    else:
-        return n + calculate(n - 2)
 
     
 print(calculate(n))
