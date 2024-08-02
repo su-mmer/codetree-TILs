@@ -1,5 +1,5 @@
 n = int(input())
-arr = [0 for _ in range(101)]
+arr = [0 for _ in range(201)]
 
 for _ in range(n):
     a, b = map(int, input().split())
