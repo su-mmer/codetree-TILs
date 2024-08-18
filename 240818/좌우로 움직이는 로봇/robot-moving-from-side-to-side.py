@@ -29,7 +29,6 @@ else:
 # 로봇 위치 비교
 count = 0
 for i in range(1, max(pos_a, pos_b)):
-    print(i, arr_a[i], arr_b[i])
     if arr_a[i] == arr_b[i]:
         if arr_a[i - 1] != arr_b[i - 1]:
             count += 1
