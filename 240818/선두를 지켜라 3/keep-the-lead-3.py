@@ -22,16 +22,13 @@ count = 0  # 선두 변경 횟수
 first = ''  # 선두 주자
 for i in range(1, time_a):
     if arr_a[i] < arr_b[i] and first != 'b':
-        # if first != 'b':
         first = 'b'
         count += 1
     elif arr_a[i] == arr_b[i] and first != 'ab':
-        # if first != 'ab':
         first = 'ab'
         count += 1
     elif arr_a[i] > arr_b[i] and first != 'a':
-        # if first != 'a':
         first = 'a'
         count += 1
 
-print(count if count > 0 else 1)
+print(count)
