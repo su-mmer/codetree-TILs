@@ -22,16 +22,31 @@ for _ in range(m):
 count = 0
 first = ''
 # first = 'a' if arr_a[1] > arr_b[1] else 'b'
-for i in range(2, time_a):
-    if arr_a[i] == arr_b[i] and arr_a[i-1] != arr_b[i]:
-        count += 1
-        frist = 'ab'
-    if arr_a[i-1] == arr_b[i-1] and arr_a[i] > arr_b[i]:
-        count += 1
-        first = 'a'
-    if arr_a[i-1] == arr_b[i-1] and arr_a[i] < arr_b[i]:
-        count += 1
-        first = 'b'
+for i in range(1, time_a):
+    if arr_a[i] < arr_b[i]:
+        if first != 'b':
+            first = 'b'
+            count += 1
+    elif arr_a[i] == arr_b[i]:
+        if first != 'ab':
+            first = 'ab'
+            count += 1
+    elif arr_a[i] > arr_b[i]:
+        if first != 'a':
+            first = 'a'
+            count += 1
+        
+    # if arr_a[i] == arr_b[i] and arr_a[i-1] != arr_b[i]:
+    #     count += 1
+    #     frist = 'ab'
+    # elif arr_a[i-1] == arr_b[i-1] and arr_a[i] > arr_b[i]:
+    #     count += 1
+    #     first = 'a'
+    # elif arr_a[i-1] == arr_b[i-1] and arr_a[i] < arr_b[i]:
+    #     count += 1
+    #     first = 'b'
+    # elif arr_a[i-1] != arr_a[i] and arr_a[i] < arr_b[i]:
+        
     # if arr_a[i] <= arr_b[i] and arr_a[i-1] > arr_b[i-1]:
     #     first = 'b'
     #     count += 1
