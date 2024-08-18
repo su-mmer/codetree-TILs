@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
-arr_a=[0 for _ in range(1000000)]
-arr_b=[0 for _ in range(1000000)]
+arr_a=[0 for _ in range(1000001)]
+arr_b=[0 for _ in range(1000001)]
 
 # A가 움직인 위치
 pos_a = 1
