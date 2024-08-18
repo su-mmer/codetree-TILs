@@ -40,4 +40,5 @@ for i in range(2, time_a):
     # if time_a[i] != time_a[i-1] or time_b[i] != time_b[i]:
         # count += 1
     # print(arr_a[i], arr_b[i])
-print(count)
+
+print(count if count > 0 else 1)
