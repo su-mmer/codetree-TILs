@@ -15,14 +15,22 @@ arr_n[P] = 1
 for elem in arr_t:
     if elem[0] != 0:
         _, x, y = elem[0], elem[1], elem[2]  # n초, x개발자, y개발자
+        # print(x, y)
         if arr_n[x] == 1 or arr_n[y] == 1:  # 감염자가 있으면
-            # 감염자끼리 악수 해도 횟수를 차감해야 하므로 if 2번
             if arr_k[x] < K:  # x개발자 감염 횟수 남음
                 arr_n[y] = 1  # y 감염시킴
                 arr_k[x] += 1  # x의 감염 횟수 차감
-            if arr_k[y] < K:  # y개발자 감염 횟수 남음
+            elif arr_k[y] < K:  # y개발자 감염 횟수 남음
                 arr_n[x] = 1  # x 감염시킴
                 arr_k[y] += 1  # y 감염 횟수 차감
+            print("arr_n:", arr_n[1:N+1])
+            print("arr_k:", arr_k[1:N+1])
+        # if arr_n[x] == 1 and arr_k[x] < K:  # x개발자 보균자, 횟수 남음
+        #     arr_n[y] = 1
+        #     arr_k[x] += 1
+        # elif arr_n[y] == 1 and arr_k[y] < K:  # y개발자 보균자, 횟수 남음
+        #     arr_n[x] = 1
+        #     arr_k[y] += 1
 
 for elem in arr_n[1:N+1]:
     print(elem, end='')
