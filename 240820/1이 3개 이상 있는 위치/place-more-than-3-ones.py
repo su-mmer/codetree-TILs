@@ -1,15 +1,10 @@
 n = int(input())
-arr = [[] for _ in range(n)]
+arr = [list(map(int, input().split())) for _ in range(n)]
 dxs, dys = [0, 1 ,0, -1], [1, 0, -1, 0]
-# x, y = 0, 0
 
 def in_range(x, y):
     return 0 <= x and x < n and 0 <= y and y < n
 
-
-# 격자 입력
-for i in range(n):
-    arr[i] = list(map(int, input().split()))
 
 cnt = 0
 for x in range(n):
