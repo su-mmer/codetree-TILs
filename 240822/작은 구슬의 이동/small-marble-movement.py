@@ -10,7 +10,7 @@ mapper = {
 }
 
 def in_range(x, y):
-    return 0 <= x and x < n and 0 <= y and y < n
+    return 0 < x and x <= n and 0 < y and y <= n
 
 
 dir_num = mapper[d]  # 처음에 입력받은 방향
@@ -18,7 +18,8 @@ for i in range(t):
     nx, ny = x + dxs[dir_num], y + dys[dir_num]  # 이동할 위치
     if not in_range(nx, ny):  # 해당 위치가 범위를 벗어났다면
         dir_num = 3 - dir_num  # 반대 방향으로 변경
+        continue # 변경하는 것도 1초 소요
     
     x, y = x + dxs[dir_num], y + dys[dir_num]
 
-print(x+1, y+1)
+print(x, y)
