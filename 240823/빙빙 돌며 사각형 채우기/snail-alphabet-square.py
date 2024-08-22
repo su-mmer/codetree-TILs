@@ -12,18 +12,14 @@ def in_range(x, y):
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]  # 격자
 x, y = 0, 0  # 시작 위치
 dir_num = 0  # 초기 방향(오른쪽)
-ch = 65  # 알파벳을 나타낼 아스키코드
-arr[x][y] = chr(ch)  # 알파벳 변환
-for _ in range(1, n * m):
-    ch += 1
-    if ch == 91: ch = 65  # Z 넘으면 A로 다시 돌아오게
-
+arr[x][y] = ('A')  # 시작 위치의 값
+for i in range(1, n * m):
     nx, ny = x + dxs[dir_num], y + dys[dir_num]
     if not in_range(nx, ny) or arr[nx][ny] != 0:
         dir_num = (dir_num + 1) % 4
     
     x, y = x + dxs[dir_num], y + dys[dir_num]
-    arr[x][y] = chr(ch)
+    arr[x][y] = chr(ord('A')+(i % 26))  # 아스키변환 사용
     
 
 for i in range(n):
