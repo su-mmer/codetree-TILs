@@ -3,7 +3,7 @@ arr = [list(map(int, input().split())) for _ in range(n)]
 
 cnt1, cnt2 = 0, 0  # first mini board cnt, second mini board cnt
 max_cnt = 0  # biggest cnt
-for i in range(n-1):
+for i in range(n):
     for j in range(n-2):
         cnt1 = arr[i][j] + arr[i][j+1] + arr[i][j+2]  # first mini board
         for m in range(j+3, n-2):  # 같은 줄 check
