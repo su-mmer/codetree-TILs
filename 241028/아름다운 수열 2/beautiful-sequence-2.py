@@ -3,7 +3,7 @@ arr_a = list(map(int, input().split()))
 arr_b = list(map(int, input().split()))
 
 # B의 원소의 순서를 바꾸는 게 아름다운 수열
-replace = [0]*10
+replace = [0]*101
 for i in arr_b:
     replace[i] += 1
 
