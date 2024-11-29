@@ -8,14 +8,15 @@ for i in range(T):
 ls, ln = a - 1, a - 1  # left_s, left_n 왼쪽의 s, n 좌표
 # rs, rn = b+1, b+1  # right_s, right_n 오른쪽의 s, n 좌표
 # right_s, right_n 오른쪽의 s, n 좌표
-for i in range(a, b + 1):
+for i in range(len(arr)):
     if arr[i] == 'S':
         rs = i
         break
-for i in range(a, b + 1):        
+for i in range(len(arr)):
     if arr[i] == 'N':
         rn = i
         break
+# print(rs, rn)
 
 count = 0  # special 갯수
 for x in range(a, b + 1):  # special 탐색
