@@ -1,3 +1,6 @@
+import sys
+MAXSIZE = sys.maxsize
+MINSIZE = -sys.maxsize
 T, a, b = map(int, input().split())
 
 arr = [0] * 1001
@@ -6,7 +9,7 @@ for i in range(T):
     arr[int(d)] = alphabet
 
 # left_s, left_n 시작점으로부터 왼쪽의 s, n 좌표
-ls, ln, rs, rn = 0, 0, 1001, 1001
+ls, ln, rs, rn = MINSIZE, MINSIZE, MAXSIZE, MAXSIZE
 for i in range(a, 0, -1):
     if arr[i] == 'S':
         ls = i
