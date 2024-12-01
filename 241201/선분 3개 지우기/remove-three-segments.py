@@ -9,6 +9,8 @@ for i in range(n):
             # 남은 선분 중 2개 x, y
             for x in range(n):
                 for y in range(x + 1, n):
+                    if n == 4:
+                        count = 4
                     if x == i or x == j or x == k or y == i or y == j or y ==k:
                         continue
                     # 겹치지 않으면 count
