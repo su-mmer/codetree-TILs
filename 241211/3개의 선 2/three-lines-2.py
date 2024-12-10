@@ -17,20 +17,32 @@ if len(set_x) <= 3:
 if len(set_y) <= 3:
     flag = True
 
-list_x, list_y = list(set_x), list(set_y)
+list_x, list_y = list(set_x), list(set_y)  # set to list
+
 # x x y 탐색
-for x1 in range(len(list_x)):
-    for x2 in range(len(list_x)):
-        for y in range(len(list_y)):
+for x1 in list_x:
+    for x2 in list_x:
+        for y in list_y:
+            mini_flag = True
             for i in range(n):
                 if arr[i][0] == x1 or arr[i][0] == x2 or arr[i][1] == y:
-                    flag = True
+                    continue
+                else:
+                    mini_flag = False
+            if mini_flag == True:
+                flag = True
+  
 # x y y 탐색
-for x in range(len(list_x)):
-    for y1 in range(len(list_y)):
-        for y2 in range(len(list_y)):
+for x in list_x:
+    for y1 in list_y:
+        for y2 in list_y:
+            mini_flag = True
             for i in range(n):
                 if arr[i][0] == x or arr[i][1] == y1 or arr[i][1] == y2:
-                    flag = True
+                    continue
+                else:
+                    mini_flag = False
+            if mini_flag == True:
+                flag = True
 
 print(int(flag))
