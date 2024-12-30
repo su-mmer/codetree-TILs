@@ -5,7 +5,7 @@ n = int(input())
 arr = [ list(map(int, input().split())) for _ in range(n) ]
 
 max_scr = 0  # 가장 높은 점수
-for i in range(1, 3):  # 1, 2, 3 중 어느 위치
+for i in range(1, 4):  # 1, 2, 3 중 어느 위치
     score = 0  # 야바위 점수 init
     place = [0, 0, 0, 0]  # 종이컵 init
     place[i] = 1  # 조약돌 배치
