@@ -5,13 +5,12 @@ check = []
 
 def count_set(aset):
     aset = set(aset)
+    # set가 2개의 원소를 가진 집합이며 check에 포함되지 않을 경우 1 return
     if len(aset) == 2 and aset not in check:
         check.append(aset)
-        # print(check)
         return 1
     else:
         return 0
-    # return 1 if len(set(aset)) == 2 else 0
 
 
 # 가로
@@ -24,10 +23,7 @@ for row in arr:
     li_a.append(row[0])
     li_b.append(row[1])
     li_c.append(row[2])
-# print(li_a)
 cnt += (count_set(li_a) + count_set(li_b) + count_set(li_c))
-# cnt += count_set(li_b)
-# cnt += count_set(li_c)
 
 # 대각선
 cnt += count_set([arr[0][0], arr[1][1], arr[2][2]])
