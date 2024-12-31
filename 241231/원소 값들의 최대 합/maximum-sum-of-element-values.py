@@ -11,11 +11,11 @@ for i in range(1, n):  # 배열 전체 탐색 (시작 위치)
         # mv = cp[i]
         # print(cp[i], cp[mv], cp[mv], mv)
         cp[i], cp[mv] = cp[mv], mv  # swap
-        print(cp[i], cp[mv], cp)
+        # print(cp[i], cp[mv], cp)
         sum_mv += mv  # 움직임 원소값 합
         mv = cp[i]
         # print(cp)
-    print(sum_mv)
+    # print(sum_mv)
     max_mv = max(max_mv, sum_mv)  # 최대 비교
 
 print(max_mv)
