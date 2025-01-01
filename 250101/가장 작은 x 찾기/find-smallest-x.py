@@ -3,7 +3,7 @@ n = int(input())
 arr = [ tuple(map(int, input().split())) for _ in range(n)]
 s, e = arr[0][0] // 2, arr[0][1] // 2
 
-for i in range(s, e):
+for i in range(s, e + 1):
     x = i
     flag = True
     for j in range(n):
