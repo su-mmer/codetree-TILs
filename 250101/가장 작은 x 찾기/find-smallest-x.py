@@ -6,9 +6,9 @@ s, e = arr[0][0] // 2, arr[0][1] // 2
 for i in range(s, e + 1):
     x = i
     flag = True
-    for j in range(n):
+    for a, b in arr:
         x *= 2
-        if x < arr[j][0] or arr[j][1] < x:
+        if x < a or b < x:
             flag = False
             break
 
