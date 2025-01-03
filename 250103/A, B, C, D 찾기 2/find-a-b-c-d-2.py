@@ -3,9 +3,9 @@ arr = list(map(int, input().split()))
 arr.sort()
 
 for a in arr:
-    for b in arr[arr.index(a):]:
-        for c in arr[arr.index(b):]:
-            for d in arr[arr.index(c):]:
+    for b in arr[arr.index(a)+1:]:
+        for c in arr[arr.index(b)+1:]:
+            for d in arr[arr.index(c)+1:]:
                 if (a + b) not in arr:
                     continue
                 if (b + c) not in arr:
