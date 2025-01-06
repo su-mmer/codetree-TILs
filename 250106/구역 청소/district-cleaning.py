@@ -1,9 +1,15 @@
 xa, xb = map(int, input().split())
 xc, xd = map(int, input().split())
+arr = [False] * 101
+cnt = 0
 
-if xb <= xc or xd <= xa:
-  print(xb - xa + xd - xc)
-elif xb <= xd:
-  print(xd - xa)
-else:
-  print(xb - xc)
+for i in range(xa, xb):
+    arr[i] = True
+for i in range(xc, xd):
+    arr[i] = True
+
+for a in arr:
+    if a:
+        cnt += 1
+
+print(cnt)
