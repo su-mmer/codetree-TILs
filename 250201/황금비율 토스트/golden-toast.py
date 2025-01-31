@@ -1,6 +1,5 @@
 n, m = map(int, input().split())
 buns = input()
-# secret = [ input() for _ in range(m) ]
 
 class Node:
     def __init__ (self, data):
@@ -79,13 +78,15 @@ for _ in range(m):
     s = input()
     # print("it: ", it.data)
     if s[0] == "L":
-        it = it.prev
         if it.prev == None:
             it = l.begin()
+        else:
+            it = it.prev
     elif s[0] == "R":
-        it = it.next
         if it.next == None:
             it = l.end()
+        else:
+            it = it.next
     elif s[0] == "D":
         l.erase(it)
     elif s[0] == "P":
