@@ -80,8 +80,12 @@ for _ in range(m):
     # print("it: ", it.data)
     if s[0] == "L":
         it = it.prev
+        if it.prev == None:
+            it = l.begin()
     elif s[0] == "R":
         it = it.next
+        if it.next == None:
+            it = l.end()
     elif s[0] == "D":
         l.erase(it)
     elif s[0] == "P":
