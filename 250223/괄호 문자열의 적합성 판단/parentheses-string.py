@@ -8,11 +8,8 @@ class Stack():
         self.items.append(item)
         
     def pop(self):
-        if self.empty():
-            return False
-        else:
+        if not self.empty():
             self.items.pop()
-            return True
 
     def size(self):
         return len(self.items)
@@ -26,8 +23,6 @@ for i in arr:
     if i == "(":
         s.push(i)
     else:
-        if not s.pop():
-            break
+        s.pop()
 
-# print(s.size())
 print("Yes") if s.empty() else print("No")
