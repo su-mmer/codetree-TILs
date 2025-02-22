@@ -1,3 +1,4 @@
+import sys
 arr = input()
 
 class Stack():
@@ -8,6 +9,8 @@ class Stack():
         self.items.append(item)
         
     def pop(self):
+        # if self.empty():
+            # return False
         if not self.empty():
             self.items.pop()
 
@@ -23,6 +26,10 @@ for i in arr:
     if i == "(":
         s.push(i)
     else:
-        s.pop()
+        if s.empty():
+            print("No")
+            sys.exit()
+        else:
+            s.pop()
 
 print("Yes") if s.empty() else print("No")
