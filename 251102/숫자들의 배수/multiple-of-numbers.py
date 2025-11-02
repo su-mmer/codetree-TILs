@@ -1,5 +1,5 @@
 n = int(input())
-arr = [ n * x for x in range(1, n * 10) ]
+arr = [ n * x for x in range(1, n * 11) ]
 
 cnt = 0
 for elem in arr:
