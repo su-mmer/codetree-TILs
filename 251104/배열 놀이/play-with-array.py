@@ -12,8 +12,6 @@ for _ in range(q):
         b = q_list[1]
         if b not in arr:
             print(0)
-        elif arr.count(q_list[1]) == 1:
-            print(arr.index(q_list[1]) + 1)
         else:
             print(arr.index(q_list[1]) + 1)
 
