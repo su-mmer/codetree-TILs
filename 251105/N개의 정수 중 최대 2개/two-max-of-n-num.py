@@ -1,8 +1,10 @@
+import sys
+
 n = int(input())
 a = list(map(int, input().split()))
 
 # Please write your code here.
-first, second = a[0], a[0]
+first, second = -sys.maxsize, -sys.maxsize
 pv = 0
 # 제일 큰 값 찾기
 for i in range(n):
