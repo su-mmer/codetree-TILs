@@ -1,0 +1,7 @@
+s = input()
+a = input()
+
+if a in s:
+    print(s.count(a))
+else:
+    print(0)
