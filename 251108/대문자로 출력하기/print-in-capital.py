@@ -8,8 +8,5 @@ for char in string:
     # 소문자일 경우 대문자 변환
     elif 'a' <= char and char <= 'z':
         result += ''.join(chr(ord(char)-ord('a')+ord('A')))
-    # 알파벳이 아닐 경우 패스
-    else:
-        continue
 
 print(result)
