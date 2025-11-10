@@ -5,6 +5,6 @@ def is_part():
     if b in a:
         return a.index(b)
     else:
-        return False
+        return -1
 
-print(is_part()) if is_part() else print(-1)
+print(is_part())
