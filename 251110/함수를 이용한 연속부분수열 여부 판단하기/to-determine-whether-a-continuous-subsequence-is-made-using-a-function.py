@@ -1,6 +1,6 @@
 def is_part(n1, n2):
     cnt = 0
-    for i in range(n1-n2):
+    for i in range(n1-n2+1):
         if a[i:i+n2] == b:
             return True
     return False
