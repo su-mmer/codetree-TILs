@@ -2,7 +2,10 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 arr.sort()
-if arr[0] + arr[-1] < arr[n] + arr[n-1]:
-    print(arr[n] + arr[n-1])
-else:
-    print(arr[0] + arr[-1])
+
+max_num = 0
+for i in range(n):
+    if max_num < arr[i] + arr[-i-1]:
+        max_num = arr[i] + arr[-i-1]
+
+print(max_num)
