@@ -13,8 +13,10 @@ for _ in range(n):
     people.append(Person(name, add, reg))
 
 num = 0
-for i in range(n-1):
-    if people[i].name < people[i+1].name:
-        num = i+1
+for i in range(n):
+    if people[i].name > people[num].name:
+        num = i
 
-print(f"name {people[num].name}\naddr {people[num].address}\ncity {people[num].region}")
+print(f"name {people[num].name}")
+print(f"addr {people[num].address}")
+print(f"city {people[num].region}")
