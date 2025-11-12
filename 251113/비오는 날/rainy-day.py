@@ -12,7 +12,9 @@ for _ in range(n):
     date, day, weather = input().split()
     dates.append(Data(date, day, weather))
 
+pv = Data("9999-99-99", "Mon", "Rain")
 for i, d in enumerate(dates):
-    if d.weather == "Rain":
-        print(d.date, d.day, d.weather, sep=' ')
-        break
+    if d.weather == "Rain" and pv.date > d.date:
+        pv = d
+
+print(pv.date, pv.day, pv.weather, sep=' ')
