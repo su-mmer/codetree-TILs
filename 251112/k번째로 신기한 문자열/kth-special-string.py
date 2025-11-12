@@ -4,7 +4,7 @@ arr = [ input() for _ in range(n) ]
 arr_t = []
 
 for elem in arr:
-    if t in elem:
+    if t == elem[:len(t)]:
         arr_t.append(elem)
 
 arr_t.sort()
