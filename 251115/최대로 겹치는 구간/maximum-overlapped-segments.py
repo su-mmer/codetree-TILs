@@ -9,7 +9,7 @@ for q in questions:
         for i in range(101, abs(q[0])+100+1):
             arr[i] += 1
     elif q[0] < 0 and q[1] < 0:
-        for i in range(102, abs(q[0])+100+1):
+        for i in range(abs(q[1])+100, abs(q[0])+100+1):
             arr[i] += 1
     else:
         for i in range(q[0], q[1]):
