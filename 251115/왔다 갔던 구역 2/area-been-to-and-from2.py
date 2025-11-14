@@ -8,7 +8,7 @@ for q in questions:
     q[0] = int(q[0])
 
     if q[1] == "L":
-        for i in range(pv, pv-q[0], -1):
+        for i in range(pv-1, pv-q[0]-1, -1):
             arr[i] += 1
         pv = pv - q[0]
     elif q[1] == "R":
