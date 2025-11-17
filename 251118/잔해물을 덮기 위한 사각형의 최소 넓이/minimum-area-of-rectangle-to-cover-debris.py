@@ -6,32 +6,29 @@ bx1, by1, bx2, by2 = map(int, input().split())
 ax1, ay1, ax2, ay2 = OFFSET+ax1, OFFSET+ay1, OFFSET+ax2, OFFSET+ay2
 bx1, by1, bx2, by2 = OFFSET+bx1, OFFSET+by1, OFFSET+bx2, OFFSET+by2
 
+# 채우기
 for i in range(ay1, ay2):
     for j in range(ax1, ax2):
         arr[i][j] += 1
 
+# 비우기
 for i in range(by1, by2):
     for j in range(bx1, bx2):
         arr[i][j] -= 1
 
-# 가로
+# 남은 잔해물을 덮기 위한 w, h
 max_w = 0
 for i in range(ay1, ay2):
-    cnt = 0
     for j in range(ax1, ax2):
         if arr[i][j] == 1:
-            cnt += 1
-    if max_w < cnt:
-        max_w = cnt 
+            max_w = j
+# print(max_w - ax1 + 1)
 
-# 세로
 max_h = 0
 for j in range(ax1, ax2):
-    cnt = 0
     for i in range(ay1, ay2):
         if arr[i][j] == 1:
-            cnt += 1
-    if max_h < cnt:
-        max_h = cnt
+            max_h = i
 
-print(max_w * max_h)
+# print(max_h - ay1 + 1)
+print((max_w - ax1 + 1) * (max_h - ay1 + 1))
