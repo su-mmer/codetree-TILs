@@ -22,7 +22,9 @@ for i in range(ay1, ay2):
     for j in range(ax1, ax2):
         if arr[i][j] == 1:
             max_w = j
-# print(max_w - ax1 + 1)
+
+if max_w != 0:
+    max_w = max_w - ax1 + 1
 
 max_h = 0
 for j in range(ax1, ax2):
@@ -30,5 +32,8 @@ for j in range(ax1, ax2):
         if arr[i][j] == 1:
             max_h = i
 
-# print(max_h - ay1 + 1)
-print((max_w - ax1 + 1) * (max_h - ay1 + 1))
+if max_h != 0:
+    max_h = max_h - ay1 + 1
+
+# 넓이
+print(max_w * max_h)
