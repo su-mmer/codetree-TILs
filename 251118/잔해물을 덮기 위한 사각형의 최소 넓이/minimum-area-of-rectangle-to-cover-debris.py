@@ -17,8 +17,11 @@ for i in range(by1, by2):
         arr[i][j] -= 1
 
 # 남은 잔해물을 덮기 위한 w, h
-max_w = 0
+min_w, max_w = ax2, 0
 for i in range(ay1, ay2):
+    if arr[i].index(1) < min_w:
+        min_w = arr[i].index(1)
+
     for j in range(ax1, ax2):
         if arr[i][j] == 1:
             max_w = j
@@ -26,14 +29,19 @@ for i in range(ay1, ay2):
 if max_w != 0:
     max_w = max_w - ax1 + 1
 
-max_h = 0
+min_h, max_h = ay2, 0
 for j in range(ax1, ax2):
     for i in range(ay1, ay2):
         if arr[i][j] == 1:
             max_h = i
-
+        if arr[i][j] != 1 and arr[i+1][j] == 1 and i < min_h:
+            min_h = i
+# print(min_h - 1)
+# print(min_h, max_h)
+min_h -= 1
 if max_h != 0:
     max_h = max_h - ay1 + 1
 
+# print(max_w, max_h)
 # 넓이
 print(max_w * max_h)
