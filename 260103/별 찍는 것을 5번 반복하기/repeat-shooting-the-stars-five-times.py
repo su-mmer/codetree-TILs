@@ -1,6 +1,5 @@
-def print_5_stars():
+def print_10_stars():
     print("*" * 10)
 
-
 for _ in range(5):
-    print_5_stars()
+    print_10_stars()
