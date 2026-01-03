@@ -2,7 +2,7 @@ n, m = map(int, input().split())
 
 def print_num(n, m):
     if m < n:
-        swap(n, m)  # always n < m
+        n, m = m, n  # always n < m
     
     num = 0
     for i in range(1, n+1):
