@@ -25,16 +25,17 @@ for i in range(fx1, fx2):
 # print(bx, by)
 
 lx, ly = bx, by
+# print(bx, by, lx, ly)
 for i in range(fx1, fx2):
     for j in range(fy1, fy2):
         if arr[i][j] == True:
             if lx < i:
                 lx = i
             if ly < j:
-                ly = i
+                ly = j
 
 cnt = 0
-# print(bx, lx, by, ly)
+# print(bx, by, lx, ly)
 if bx == lx and by != ly:
     # for i in range(bx, lx+1):
     for j in range(by, ly+1):
