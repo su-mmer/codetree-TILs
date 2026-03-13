@@ -17,39 +17,22 @@ for i in range(sx1, sx2):
     for j in range(sy1, sy2):
         arr[i][j] = False
 
-# begin x, y
-bx, by = fx2, fy2
+# begin, last x, y
+bx, by, lx, ly = fx2, fy2, fx1, fy1
+hasTrue = False  # 덮어야 하는 사각형 확인
 for i in range(fx1, fx2):
     for j in range(fy1, fy2):
-        if arr[i][j] == True:  # 가장 작은 x, y 찾기
-            if i < bx:
-                bx = i
-            if j < by:
-                by = j
-# print(bx, by)
-
-# last x, y
-lx, ly = bx, by
-for i in range(fx1, fx2):
-    for j in range(fy1, fy2):
-        if arr[i][j] == True:  # 가장 큰 x, y 찾기
-            if lx < i:
-                lx = i
-            if ly < j:
-                ly = j
+        if arr[i][j] == True:  # 가장 작은, 가장 큰 xy 찾기
+            hasTrue = True
+            bx = min(i, bx)
+            by = min(j, by)
+            lx = max(i, lx)
+            ly = max(j, ly)
+# print(bx, by, lx, ly)
 
 # 최소 직사각형의 넓이 구하기
 cnt = 0
-# print(bx, by, lx, ly)
-if bx == lx and by != ly:  # 시작과 끝이 y만 다름
-    for j in range(by, ly+1):
-        cnt += 1
-elif bx != lx and by == ly:  # 시작과 끝이 x만 다름
-    for i in range(bx, lx+1):
-        cnt += 1
-elif bx != lx and by != ly:  # 시작과 끝이 x,y가 모두 다름
-    for i in range(bx, lx+1):
-        for j in range(by, ly+1):
-            cnt += 1
+if hasTrue:  # 덮어야 하는 사각형이 있으면
+    cnt = (lx - bx + 1) * (ly - by + 1)
 
 print(cnt)
