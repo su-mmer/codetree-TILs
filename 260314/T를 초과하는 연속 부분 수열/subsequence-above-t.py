@@ -1,7 +1,7 @@
 n, t = map(int, input().split())
 arr = list(map(int, input().split()))
 
-ans, legnth = 0, 0
+ans, length = 0, 0
 for i in range(n):
     if arr[i] > t:
         length += 1
