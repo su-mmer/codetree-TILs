@@ -25,6 +25,6 @@ for i in range(1, time_a+1):
     elif arr_a[i] < arr_b[i] and arr_a[i-1] < arr_b[i-1]:
         continue
 
-    cnt + =1
-    
+    cnt += 1
+
 print(cnt)
