@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
-arr_a = [0 for _ in range(50000)]
-arr_b = [0 for _ in range(50000)]
+arr_a = [0 for _ in range(1000000)]
+arr_b = [0 for _ in range(1000000)]
 
 # a 움직임 기록
 move_a = 0
