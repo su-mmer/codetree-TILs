@@ -10,6 +10,8 @@ for i in range(t):
     
 for j in range(1, 30):
     for i in range(1, n+1):
+        # print(meet[meet[i][j]][0])
+        # print("me: ", i, " infect:", arr_k[i], " oth: ", meet[i][j], " othin: ", meet[meet[i][j]][0])
         if meet[i][0] == 1 and arr_k[i] < k:  # 내가 감염자
             if meet[i][j] != 0 and meet[meet[i][j]][0] == 1:  # 상대 감염자
                 arr_k[i] += 1  # 전염 횟수 +1
@@ -17,7 +19,8 @@ for j in range(1, 30):
                 arr_k[i] += 1  # 전염 횟수 +1
                 meet[meet[i][j]][0] = 1
                 # print("check: ", meet[i][j])
-                break  # 내가 감염시켰으면 그만
+                break
+        # print("me: ", i, " infect:", arr_k[i], " oth: ", meet[i][j], " othin: ", meet[meet[i][j]][0])
 
 # for elem in meet:
 #     for e in elem[:30]:
