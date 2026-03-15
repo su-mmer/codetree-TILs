@@ -11,7 +11,7 @@ for i in range(t):
 for j in range(1, 251):
     for i in range(1, n+1):
         # print(meet[meet[i][j]][0])
-        if meet[meet[i][j]][0] == 1 and arr_k[meet[i][j]] < 2:
+        if meet[meet[i][j]][0] == 1 and arr_k[meet[i][j]] < k:
             meet[i][0] = 1
             arr_k[meet[i][j]] += 1
 
