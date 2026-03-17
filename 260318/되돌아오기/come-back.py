@@ -24,6 +24,7 @@ for _ in range(n):
 
         if x == 0 and y == 0:
             clear = True
+            break
 
     if clear: break
 
