@@ -16,4 +16,4 @@ for _ in range(m):
         if in_range(rn, cn) and arr[rn][cn]==1:
             cnt += 1
 
-    print(1) if cnt >= 3 else print(0)
+    print(1) if cnt == 3 else print(0)
