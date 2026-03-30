@@ -26,11 +26,11 @@ for _ in range(1, k):
 
 # 시작하는 move_dir을 찾기 위해 모서리와 / \ 확인
 if init_dir == 0 and arr[kx][ky] == '/':
-    move_dir = 0
+    move_dir = 3
 elif init_dir == 0 and arr[kx][ky] == '\\':
     move_dir = 2
 elif init_dir == 1 and arr[kx][ky] == '/':
-    move_dir = 3
+    move_dir = 0
 elif init_dir == 1 and arr[kx][ky] == '\\':
     move_dir = 3
 elif init_dir == 2 and arr[kx][ky] == '/':
