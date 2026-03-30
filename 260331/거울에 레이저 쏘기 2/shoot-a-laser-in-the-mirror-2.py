@@ -44,20 +44,7 @@ elif init_dir == 3 and arr[kx][ky] == '\\':
 
 # print(init_dir, move_dir)
 
-# left_x, left_y = [1, -1, 0, 0], [0, 0, 1, -1]  # /인 경우 회전 방향
-# right_x, right_y = [-1, 0, 1, 0], [0, 1, 0, -1]  # \인 경우 회전 방향
 cnt = 0
-
-# while in_range(kx, ky):
-#     if arr[kx][ky] == '/':  # left
-#         move_dir = (3 - move_dir) % 4
-#         kx, ky = kx + left_x[move_dir], ky + left_y[move_dir]
-        
-#     elif arr[kx][ky] == '\\':  # right
-#         move_dir = (3 - move_dir) % 4
-#         kx, ky = kx + right_x[move_dir], ky + right_y[move_dir]
-
-#     cnt += 1
 
 left_x, left_y = [0, -1, 0, 1], [-1, 0, 1, 0]  # /인 경우 회전 방향
 right_x, right_y = [-1, 0, 1, 0], [0, 1, 0, -1]  # \인 경우 회전 방향
@@ -65,11 +52,11 @@ tmp = arr[kx][ky]
 
 while in_range(kx, ky):
     if arr[kx][ky] == '/':  # left
-        if tmp == '\\':
+        if tmp == '\\':  # 방향 바뀌면 dir도 변경
             move_dir = (move_dir + 1) % 4
         tmp = '/'
-        move_dir = (3 - move_dir) % 4
-        kx, ky = kx + left_x[move_dir], ky + left_y[move_dir]
+        move_dir = (3 - move_dir) % 4  # 꺾기
+        kx, ky = kx + left_x[move_dir], ky + left_y[move_dir]  # 이동
         
     elif arr[kx][ky] == '\\':  # right
         if tmp == '/':
