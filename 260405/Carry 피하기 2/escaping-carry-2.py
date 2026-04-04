@@ -10,7 +10,7 @@ def cal_carry(t_i, t_j, t_k):
     if carry: return True  # 모든 자리 carry 성공
 
 
-max_size, sum_num = -1, 0
+max_size, sum_num = -1, -1
 for i in numbers:
     for j in numbers[numbers.index(i)+1:]:
         for k in numbers[numbers.index(j)+1:]:
