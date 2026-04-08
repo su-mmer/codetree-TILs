@@ -6,21 +6,13 @@ def in_range(x, y):
 
 max_val = 0
 for f_i in range(n):
-    for f_j in range(n):
-        # 오른 쪽에 범위가 있을 경우
-        s_i = f_i
-        for s_j in range(f_j+3, n):
-            if not in_range(f_i, s_j+2):
-                break
-            
-            val = arr[f_i][f_j] + arr[f_i][f_j+1] + arr[f_i][f_j+2] + arr[s_i][s_j] + arr[s_i][s_j+1] + arr[s_i][s_j+2]
-            max_val = max(val, max_val)
-        # 아래 쪽에 범위가 있을 경우
-        for s_i in range(f_i+1, n):
-            for s_j in range(n):
-                if not in_range(s_i, s_j+2) or not in_range(f_i, f_j+2):
-                    break
-                
+    for f_j in range(n - 2):
+        for s_i in range(n):
+            for s_j in range(n -2):
+
+                if f_i == s_i and abs(f_j - s_j) <= 2:  # 겹치는 경우 제외
+                    continue
+
                 val = arr[f_i][f_j] + arr[f_i][f_j+1] + arr[f_i][f_j+2] + arr[s_i][s_j] + arr[s_i][s_j+1] + arr[s_i][s_j+2]
                 max_val = max(val, max_val)
 
