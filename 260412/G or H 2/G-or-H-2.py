@@ -7,7 +7,7 @@ for i in range(n):
     arr[int(location)] = alphabet
     max_location = max(max_location, int(location))  # 최대 위치 찾기
 
-max_size = 0
+max_size, size = 0, 0
 for i in range(max_location - 1):  # 시작점
     for j in range(i + 2, max_location + 1):  # 끝점, 사람 2명 이상
         if not arr[i] == 0 and not arr[j] == 0:  # 시작, 끝에 사람이 있으면 
